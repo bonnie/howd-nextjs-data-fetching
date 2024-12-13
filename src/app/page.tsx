@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import Card from "@/components/Card";
+import QuoteContent from "@/components/QuoteContent";
 import Separator from "@/components/Separator";
 import useQuoteStyles from "@/hooks/use-quote-styles";
 
@@ -12,9 +12,7 @@ export default function Home() {
     <main>
       <Button onClick={fetchQuoteStyles}>use random quote</Button>
       <Separator />
-      <Card textColor="aliceBlue" backgroundColor="mediumBlue">
-        {quote}
-      </Card>
+      <QuoteContent status={status} quote={quote} error={error} />
     </main>
   );
 }
